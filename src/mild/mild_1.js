@@ -40,9 +40,9 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-    let mn = Math.min(numbers);
-    let mx = Math.max(numbers);
-    return `max: ${Math.max(...numbers)}, min: ${...Math.min(numbers)}`;
+    let mn = Math.min(...numbers);
+    let mx = Math.max(...numbers);
+    return `max: ${Math.max(...numbers}, min: ${Math.min(...numbers)}`;
 }
 
 /**
