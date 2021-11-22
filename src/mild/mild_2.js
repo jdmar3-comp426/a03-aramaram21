@@ -36,7 +36,7 @@ export function identifyArray(array) {
         rt['value'] = array[i];
         arr.push(rt);
     }
-    return rt;
+    return arr;
 }
 
 /**
