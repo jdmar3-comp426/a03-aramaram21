@@ -81,7 +81,7 @@ export function countArray(array) {
     }
     var rt = {};
     for (let i = 0; i < arr.length; i++){
-        rt[i] = {arr[i]: countarr[i]};
+        rt[arr[i]] = countarr[i];
     }
     return rt;
 }
