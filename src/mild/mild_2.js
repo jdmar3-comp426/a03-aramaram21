@@ -77,7 +77,7 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
     const { [key]:omit, ...update } = object;
-    object = update;
+    return update;
 }
 
 /**
