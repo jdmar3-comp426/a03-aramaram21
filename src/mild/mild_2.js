@@ -28,7 +28,15 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+    const arr = [];
+    for(let i = 0; i < array.length; i++){
+        const type = typeof array[i];
+        var rt = {};
+        rt['type'] = type;
+        rt['value'] = array[i];
+        arr.push(rt);
+    }
+    return rt;
 }
 
 /**
