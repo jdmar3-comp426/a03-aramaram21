@@ -57,5 +57,31 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    const arr = [];
+    const countarr = [];
+    for (let i = 0; i < array.length, i++){
+        let included = 0;
+        for(let j = 0; j < arr.length, j++){
+            if(array[i] === arr[j]){
+                included++:
+            }
+        }
+        if(included > 0){
+            arr.push(array[i]);
+        }
+    }
+    for (let i = 0; i < arr.length, i++){
+        let count = 0;
+        for(let j = 0; j < array.length; j++){
+            if(array[j] === arr[i]){
+                count++;
+            }
+        }
+        numarr.push(count);
+    }
+    var rt = {};
+    for (let i = 0; i < arr.length; i++){
+        rt[i] = {arr[i]: countarr[i]};
+    }
+    return rt;
 }
