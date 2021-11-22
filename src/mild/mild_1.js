@@ -63,7 +63,7 @@ export function countArray(array) {
         let included = 0;
         for(let j = 0; j < arr.length; j++){
             if(array[i] === arr[j]){
-                included++:
+                included++;
             }
         }
         if(included > 0){
