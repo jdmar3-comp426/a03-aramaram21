@@ -66,7 +66,7 @@ export function countArray(array) {
                 included++;
             }
         }
-        if(included > 0){
+        if(included === 0){
             arr.push(array[i]);
         }
     }
