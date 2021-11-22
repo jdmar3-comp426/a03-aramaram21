@@ -77,7 +77,7 @@ export function countArray(array) {
                 count++;
             }
         }
-        numarr.push(count);
+        countarr.push(count);
     }
     var rt = {};
     for (let i = 0; i < arr.length; i++){
