@@ -59,7 +59,7 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
-    const stat;
+    const stat = {};
     array.sort(function(a,b){return a - b});
     let sm = array.reduce((a,b) => a+b, 0);
     let mn = sm/array.length;
