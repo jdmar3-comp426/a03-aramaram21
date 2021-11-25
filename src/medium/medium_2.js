@@ -21,7 +21,7 @@ see under the methods section
  */
 export const allCarStats = {
     avgMpg: {city: (mpg_data.reduce((a,b) => a + (b["city_mpg"] || 0),0)/mpg_data.length), highway: (mpg_data.reduce((a,b) => a + (b["highway_mpg"] || 0),0)/mpg_data.length)},
-    allYearStats: getStatistics(mpg_data),
+    allYearStats: undefined,
     ratioHybrids: mpg_data.reduce((counter, car) => car.hybrid === "true" ? counter +=1 : counter, 0)/mpg_data.length,
 };
 
