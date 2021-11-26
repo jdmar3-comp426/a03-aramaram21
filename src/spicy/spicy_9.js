@@ -126,7 +126,17 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    const even = [];
+    for(let i =0; i < arr.length; i+=2){
+        even.push(arr[i]);
+    }
+    const filt = even.filter(test);
+    if(filt.length > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 };
 
 
