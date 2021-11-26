@@ -84,6 +84,8 @@ export const allCarStats = {
  * }
  */
 export const moreStats = {
-    makerHybrids: undefined,
+    let hy = mpg_data.filter(mpg_data => mpg_data.hybrid === true);
+    let hyall = _.groupBy(hy, 'id');
+    makerHybrids: hyall,
     avgMpgByYearAndHybrid: undefined
-};
+}
