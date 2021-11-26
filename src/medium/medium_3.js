@@ -54,7 +54,7 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    
 }
 
 
@@ -67,5 +67,9 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    const result = {};
+    for(let i = 0; i < years.length; i++){
+        result.push(car_data.filter(car => car.year === years[i]);
+    }
+    return result;
 }
