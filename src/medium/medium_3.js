@@ -67,7 +67,7 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-    const result = {};
+    var result = [];
     for(let i = 0; i < years.length; i++){
         const temp = car_data.filter(car => car.year === years[i]);
         result.push(temp);
