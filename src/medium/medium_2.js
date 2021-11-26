@@ -84,8 +84,6 @@ export const allCarStats = {
  * }
  */
 export const moreStats = {
-    let hy = mpg_data.filter(mpg_data => mpg_data.hybrid === true);
-    let hyall = _.groupBy(hy, 'id');
-    makerHybrids: hyall,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: undefined,
+    avgMpgByYearAndHybrid: undefined,
 }
