@@ -69,7 +69,8 @@ export function searchName(car_data, searchTerm) {
 export function searchByYear(car_data, years) {
     const result = {};
     for(let i = 0; i < years.length; i++){
-        result.push(car_data.filter(car => car.year === years[i]));
+        const temp = car_data.filter(car => car.year === years[i]);
+        result.push(temp);
     }
     return result;
 }
