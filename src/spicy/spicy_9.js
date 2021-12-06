@@ -15,7 +15,11 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-
+    let result = [];
+    for(let i = 0; i < n; i++){
+        result.push(fn(...params));
+    }
+    return result;
 };
 
 
@@ -24,7 +28,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-
+    repeat(console.log, 10, "Hello, world!");
 };
 
 
@@ -41,7 +45,9 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+    return (num2) => {
+        return num1 * num2;
+    }
 };
 
 
@@ -49,7 +55,7 @@ export const multiplyBy = (num1) => {
  * Use the multiplyBy function to create and export a function named
  *   "tenTimes" that multiplies a number by 10.
  */
-export const tenTimes = undefined;
+export const tenTimes = multiplyBy(10);
 
 
 /**
@@ -57,6 +63,7 @@ export const tenTimes = undefined;
  *   function to multiply 50 by 10 and returns the result.
  */
 export const tenTimesFifty = () => {
+    return tenTimes(50);
 
 };
 
@@ -85,7 +92,17 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-
+    const even = [];
+    for(let i =0; i < arr.length; i+=2){
+        even.push(arr[i]);
+    }
+    const filt = even.filter(test);
+    if(even.length === filt.length){
+        return true;
+    }
+    else{
+        return false;
+    }
 };
 
 
@@ -109,7 +126,17 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    const even = [];
+    for(let i =0; i < arr.length; i+=2){
+        even.push(arr[i]);
+    }
+    const filt = even.filter(test);
+    if(filt.length > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 };
 
 
